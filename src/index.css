@@ -1,0 +1,90 @@
+@import "@fontsource/vazirmatn";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities{
+    @font-face {
+        font-family: Vazir;
+        src: url("../fonts/Vazir-Light.ttf") format("truetype");
+      }
+   
+    :root{
+        --icon-color:rgb(178, 190, 195);
+        --background-image:rgb(99, 110, 114);
+
+    }
+    body{
+        font-family: vazir;
+    }
+    
+  
+    .navbar{
+        display: flex;
+        column-gap: 10px;
+
+    }
+    .navbar-shadow{
+        box-shadow: ();
+    }
+    .navbar-second{
+        column-gap: 12px;
+        display: flex;
+    }
+    .border-right:not(:last-child){
+        border-inline-end: 1px solid  black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+    }
+    .icon-color{
+        color: var(--icon-color);
+    }
+    .background-color{
+        background-color:var(--background-image);
+    }
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 4px;
+    }
+    .text-size{
+        font-size: 25px;
+        color: var(--background-image);
+    }
+    .border-style{
+        border-bottom:  1px solid var(--icon-color);
+    }
+
+    .border-input{
+        border: 1px solid var(--icon-color);
+
+    }
+    .border-Ticket{
+        border: 1px solid var(--icon-color) ;
+        border-radius: 8px;
+    }
+    .text-sizes{
+        font-size: 14px;
+        font-weight: 400;
+      
+    }
+    .font-size{
+        width: 20px;
+        height: 20px;
+      
+    }
+    .plus-color{
+        color: rgb(23, 192, 235);
+    }
+    .minus-color{
+        color: rgb(255, 175, 64);
+    }
+    .shadow-minicard{
+        box-shadow: 1px 4px 15px rgb(75, 75, 75);
+    }
+}
