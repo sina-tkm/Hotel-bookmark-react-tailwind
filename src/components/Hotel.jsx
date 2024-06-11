@@ -1,4 +1,6 @@
 import { Square3Stack3DIcon } from "@heroicons/react/16/solid"
+import Location from "./Location"
+
 
 
 function Hotel() {
@@ -10,10 +12,11 @@ function Hotel() {
           <span>(۳)جستجو های اخیر</span>
         </div>
       <Lastsearch />
-    
-
+      <Location />
+   
       
       </div>
+   
     </div>
   )
 }

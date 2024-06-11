@@ -2,7 +2,7 @@
 
 function Train() {
   return (
-    <div> Access denied</div>
+    <div className="p-[68px]">  No services</div>
   )
 }
 

@@ -5,6 +5,13 @@ import useOutsideClick from "./hooks/useOutsideClick"
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRange } from 'react-date-range';
+import { format } from "date-fns";
+import useOutsideDate from "./hooks/useOutsideDate";
+import { createSearchParams, useNavigate } from "react-router-dom";
+
+
+
+
 
 
 function Dateselector() {
@@ -19,12 +26,11 @@ function Dateselector() {
             {
         startDate: new Date(),
         endDate: new Date(),
-        key: 'traveling-date-range',
+        key: 'selection',
     }
 ])
-
     const [openDate,setOpenDate] = useState(false)
-    console.log(openDate)
+    
 
     const handleOption = (name,operation)=>{
         setOption((prev) =>{
@@ -34,11 +40,45 @@ function Dateselector() {
           }
         })
     }
+    const navigate = useNavigate()
+   
+
+    const handleRoute = ()=>{
+    const encodedParams  =  createSearchParams({
+    date:JSON.stringify(date),
+    option:JSON.stringify(option),
+    destination,
+     })
+   
+     navigate(
+      {
+        pathname:"/hotels",
+        search:encodedParams.toString()
+
+      }
+     )
+    }
+
+
+    const dateRef = useRef()
+    useOutsideDate(dateRef,"clickDateDown",()=>setOpenDate(false))
+
+
   return (
-    <div className="flex mx-auto w-full justify-between pt-20 pb-10 px-16">
+    <div className="flex mx-auto w-full justify-between pt-20 pb-10 px-16 relative ">
+         <div ref={dateRef}>
+         {openDate && 
+            <DateRange
+            className="absolute top-[125px] right-[290px] shadow-minicard border-2 z-[100]  "
+            ranges={date} 
+            onChange={(item) => setDate([item.selection])} 
+            minDate={new Date()}
+            moveRangeOnFirstSelection={true}
+             />}
       
-        <div className="border w-[160px] flex justify-center items-center  bg-yellow-500 rounded-md">
-            <button>جستجو</button>
+         </div>
+        <div onClick={handleRoute} className="border w-[160px] flex justify-center items-center  bg-yellow-500 rounded-md">
+            <button >جستجو</button>
         </div>
 
       <div>
@@ -49,15 +89,12 @@ function Dateselector() {
         {openOption && <Minicard option ={option} handleOption={handleOption} setOpenOption={setOpenOption}/>}
       </div>
         
-        <div onClick={()=>setOpenDate(!openDate)} className="flex gap-x-4 border-input justify-center items-center p-4 h-[40px] rounded-md">
-            <div className="border-right">
-                <span className="text-sizes">20/10/20204</span>
-            </div>
-            <div className="border-right">
-                <span className="text-sizes">20/11/2023</span>
-            </div>
-            {openDate && <DateRange ranges={date} onChange={(item) => setDate([item.selection])} minDate={new Date()}  />}
-        </div>
+        <div id="clickDateDown"  onClick={()=>setOpenDate(!openDate)} className=" flex whitespace-nowrap cursor-pointer relative gap-x-4 border-input justify-center items-center p-4 h-[40px] rounded-md">
+          
+             {`${format(date[0].startDate,"MM/dd/yyyy")}   |   ${format(date[0].endDate,"MM/dd/yyyy")}`}
+       
+        </div> 
+     
         <div className="flex flex-col relative">
             <h4 className="absolute top-0 right-2 mt-[-12px] bg-white px-2 text-[12px] icon-color">انتخاب مقصد</h4>
             <input 
@@ -85,8 +122,8 @@ export function Minicard({option,handleOption,setOpenOption}) {
 
  return (
     <div className="absolute flex flex-col p-[6px] w-fit  gap-y-4 border rounded-md px-[14px] bg-white shadow-minicard" ref={optionRef}>
+        <Peaples handleOption={handleOption} type= "اتاق" minLimit={1} option={option} maxLimit={9}/>  
         <Peaples handleOption={handleOption} type="کودک" minLimit={1} option={option} maxLimit={9}/>
-        <Peaples handleOption={handleOption} type= "اتاق" minLimit={1} option={option} maxLimit={9}/>
         <Peaples handleOption={handleOption} type="بزرگسال" minLimit={1} option={option} maxLimit={9} /> 
         
     </div>

@@ -4,11 +4,24 @@
 @tailwind utilities;
 
 
+
 @layer utilities{
     @font-face {
         font-family: Vazir;
         src: url("../fonts/Vazir-Light.ttf") format("truetype");
       }
+    .border-bottonclass{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 4px solid rgb(255, 175, 64) ;
+        padding: 8px;
+        transition: all .3s ease-in-out;
+    }
+    .just-padding{
+        padding: 8px;
+        transition: all .3s ease-in-out;
+    }
    
     :root{
         --icon-color:rgb(178, 190, 195);
@@ -18,16 +31,14 @@
     body{
         font-family: vazir;
     }
-    
+  
   
     .navbar{
         display: flex;
         column-gap: 10px;
 
     }
-    .navbar-shadow{
-        box-shadow: ();
-    }
+    
     .navbar-second{
         column-gap: 12px;
         display: flex;
@@ -87,4 +98,24 @@
     .shadow-minicard{
         box-shadow: 1px 4px 15px rgb(75, 75, 75);
     }
+   .wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+   }
+   .font-name{
+    font-size: 12px;
+    font-weight: 500;
+
+
+   }
+   .border-option{
+    border: .7px solid rgb(53, 59, 72);
+   }
+   .background-hover:hover{
+    background-color: rgb(251, 197, 49);
+    transition:  all .3s ease-in-out;
+   }
+
 }
