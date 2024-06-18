@@ -15,7 +15,7 @@ function HotelProvider({ children }) {
   const room = JSON.parse(searchParams.get("options"))?.room;
   const { isLoading, data: hotels } = useFetch(
     BASE_URL,
-    `city=${destination || ""}&accommodates=${room || 1}`
+    `city=${destination || ""}&accommodates_gte=${room || 1}`
   );
 
   async function getHotel(id) {
