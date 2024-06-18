@@ -66,5 +66,5 @@ export default MapList;
 export function ChangeHandle({ position }) {
   const map = useMap();
   map.setView(position);
-  return null;
+ 
 }
