@@ -5,19 +5,20 @@ import brand from "../../public/label.jpg"
 
 function NavBar() {
   return (
-    <div  className="w-full navbar-shadow">
-      <div className="w-full flex justify-between px-[45px] py-4 ">
+    <div  className="w-full navbar-shadow absolute top-[100px] ">
+      <div className=" w-full high-light absolute top-[-23px] h-[140px] "></div>
+      <div className="w-full flex justify-between px-[45px] py-8">
       <div className="flex gap-x-8 ">
         <div className="navbar">
-          <span>ورود یا ثبت نام</span>
+          <span className="icon-color">ورود یا ثبت نام</span>
           <span><UserIcon className="h-[24px] w-[24px] icon-color"/></span>
         </div>
         <div className="navbar">
-          <span>سفرهای من</span>
+          <span className="icon-color">سفرهای من</span>
           <span><TicketIcon className="h-[24px] w-[24px] icon-color"/></span>
           </div>
         <div className="navbar">
-          <span>مرکز پشتیبانی</span>
+          <span className="icon-color">مرکز پشتیبانی</span>
           <span><QuestionMarkCircleIcon className="h-[24px] w-[24px] icon-color"/></span>
           </div>
         </div>
@@ -26,29 +27,29 @@ function NavBar() {
           <li className="border-right">
           <button className="flex gap-x-3 "> 
           <span><ChevronDownIcon className="h-[24px] w-[24px] icon-color"/></span>
-          <span>بیشتر</span>
+          <span className="icon-color">بیشتر</span>
           </button>
           </li>
           <li className="border-right ">
           <button>
-          <span>تور</span>
+          <span className="icon-color">تور</span>
           </button>
           </li>
           <li className="border-right">
             <button>
-            <span>ویزا</span>
+            <span className="icon-color">ویزا</span>
             </button>
           </li>
           <li className="border-right">     
          <button className="flex gap-x-3">
          <span><ChevronDownIcon className="h-[24px] w-[24px] icon-color"/></span>
-          <span>اقامت</span>
+          <span className="icon-color">اقامت</span>
          </button>
           </li>
           <li className="border-right">
           <button className="flex gap-x-3">
           <span><ChevronDownIcon className="h-[24px] w-[24px] icon-color"/></span>
-          <span>بلیط</span>
+          <span className="icon-color">بلیط</span>
           </button>
           </li>
         </ul>

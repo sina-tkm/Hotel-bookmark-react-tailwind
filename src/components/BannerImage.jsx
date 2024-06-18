@@ -9,7 +9,7 @@ function Bannerimage(){
     <div >
       <div className="">
        
-      <img src={BannerImage} alt="" className=" object-cover h-[350px] w-full z-[-1] absolute " />
+      <img src={BannerImage} alt="hotel-banner" className=" object-cover h-[600px] w-full   z-[-1] " />
       </div>
     </div>
   )

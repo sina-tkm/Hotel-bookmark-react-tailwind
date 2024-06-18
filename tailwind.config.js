@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily:{
+          newfont :' "Merriweather", serif'
         
-          vazir: ['Vazir'],
+          
         
       }
     },

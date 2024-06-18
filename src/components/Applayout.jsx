@@ -1,15 +1,17 @@
-
-
+import { Outlet } from "react-router-dom";
+import MapList from "./MapList";
 
 function Applayout() {
   return (
-    <div>
-  
-      <div>side bar</div>
-
-      <div>map</div>
+    <div className='flex justify-between w-[75%] mx-auto mt-8'>
+      <div>
+        <Outlet />
+      </div>
+      <div>
+        <MapList />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Applayout
+export default Applayout;

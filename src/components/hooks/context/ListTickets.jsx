@@ -6,7 +6,7 @@ export const DispatchContext = createContext(() => {});
 
 
 const initialState = {
- value: "content1" 
+ value: "content3" 
 };
 
 
