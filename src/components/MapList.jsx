@@ -1,38 +1,46 @@
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
-import { useHotels } from "./hooks/context/HotelProvider";
-import { useSearchParams } from "react-router-dom";
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvent,
+} from "react-leaflet";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useGeoLocation from "./hooks/useGeoLocation";
+import useUrlLocation from "./hooks/useUrlLocation";
 
-function MapList() {
-  const { isLoading, hotels } = useHotels();
+
+function MapList({ markerLocation }) {
+  const [lat, long] = useUrlLocation();
   const [showMap, setShowMap] = useState([50, 3]);
-  const [searchParams] = useSearchParams();
-  const lat = searchParams.get("lat");
-  const long = searchParams.get("lng");
+
   const {
     isLoading: isLoadingPosition,
     position: positionLocation,
     locationMap,
   } = useGeoLocation();
+
   useEffect(() => {
     if (lat && long) {
       setShowMap([lat, long]);
     }
   }, [lat, long]);
-  useEffect(()=>{
-    if(positionLocation?.lat && positionLocation?.lng)
-      {
-      setShowMap([positionLocation.lat,positionLocation.lng])
-      }
-   },[positionLocation])
 
+  useEffect(() => {
+    if (positionLocation?.lat && positionLocation?.lng) {
+      setShowMap([positionLocation.lat, positionLocation.lng]);
+    }
+  }, [positionLocation]);
+
+ 
   return (
-    <div className=''>
+    <div className='rounded-lg h-[350px] w-[400px] p-[10px] bg-map '>
       <MapContainer
-        className='  w-[400px] h-[400px]'
+        className='  w-[100%] h-[100%] border rounded-[18px] border-black z-[100] '
         center={showMap}
-        zoom={16}
+        zoom={10}
         scrollWheelZoom={true}
       >
         <button
@@ -46,9 +54,9 @@ function MapList() {
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
         <Marker position={showMap} />
-
+        <DetectControl />
         <ChangeHandle position={showMap} />
-        {hotels.map((item) => {
+        {markerLocation.map((item) => {
           return (
             <Marker key={item.id} position={[item.latitude, item.longitude]}>
               <Popup>{item.host_location}</Popup>
@@ -56,7 +64,7 @@ function MapList() {
           );
         })}
       </MapContainer>
-      ,
+      
     </div>
   );
 }
@@ -66,5 +74,13 @@ export default MapList;
 export function ChangeHandle({ position }) {
   const map = useMap();
   map.setView(position);
- 
+}
+
+function DetectControl() {
+  const navigate = useNavigate();
+  useMapEvent({
+    click: (e) =>
+      navigate(`/bookmark/add?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+  });
+  return null;
 }

@@ -8,7 +8,7 @@ import {
 import { useDispatch, useSelect } from "./hooks/context/ListTickets";
 import Train from "./Train";
 import Airplane from "./Airplane";
-import Dateselector from "./Dateselector";
+import DateselectorHotel from "./Dateselector";
 import Bustravel from "./Bustravel";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -19,7 +19,7 @@ function Ticketmaker() {
   const [hidden, setHidden] = useState(false);
   useEffect(() => {
     function hiddenNav() {
-      if (window.scrollY >= 500) {
+      if (window.scrollY >= 200) {
         setHidden(true);
       } else {
         setHidden(false);
@@ -31,7 +31,7 @@ function Ticketmaker() {
     };
   }, [hidden]);
   return (
-    <div className='w-[75%]  mx-auto z-[1000]  mt-[-105px] navbar-shadow rounded-lg sticky-position '>
+    <div className='w-[75%]  mx-auto z-[1000]  mt-[-105px] box-shadow-bar navbar-shadow rounded-lg sticky-position '>
       <div
         className={
           !hidden
@@ -114,7 +114,7 @@ function Ticketmaker() {
 
       {state.value === "content1" && <Train />}
       {state.value === "content2" && <Airplane />}
-      {state.value === "content3" && <Dateselector />}
+      {state.value === "content3" && <DateselectorHotel />}
       {state.value === "content4" && <Bustravel />}
     </div>
   );

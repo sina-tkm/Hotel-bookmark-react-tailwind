@@ -4,11 +4,13 @@ import { useHotels } from "./hooks/context/HotelProvider";
 import { Link } from "react-router-dom";
 
 function Hotel() {
+  const { listSearch } = useHotels();
+
   return (
     <div className='mt-[40px] w-[75%] mx-auto'>
-      <div className='w-full flex justify-end items-end flex-col '>
-        <div className='flex gap-x-4 '>
-          <span>جستجو های اخیر</span>
+      <div className='w-full flex justify-start items-start flex-col '>
+        <div className={listSearch.length === 0 ? "hidden" :  `"flex gap-x-4" `}>
+          <span>Recent Searchs</span>
         </div>
         <Lastsearch />
         <Location />
@@ -21,10 +23,10 @@ export default Hotel;
 
 export function Lastsearch() {
   const { listSearch } = useHotels();
-  if (listSearch.length === 0) return <div>empty</div>;
+  if (listSearch.length === 0) return null;
  
   return (
-    <div className='flex'>
+    <div className='flex gap-x-4'>
       {listSearch.map((item) => {
         return (
           <Link to={`/hotels/${item.id}?lat=${item.latitude}&lng=${item.longitude}`}

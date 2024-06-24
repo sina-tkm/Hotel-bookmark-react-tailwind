@@ -3,13 +3,16 @@ import { useSearchParams } from "react-router-dom";
 import useFetch from "../Fetchapi";
 import axios from "axios";
 import toast from "react-hot-toast";
-const HotelsProvider = createContext();
+
+// Renaming context for clarity
+const HotelContext = createContext();
+
+const BASE_URL = "http://localhost:3000/hotels";
 
 function HotelProvider({ children }) {
   const [listSearch, setListSearch] = useState([]);
   const [currentHotel, setCurrentHotel] = useState({});
   const [isLoadingCurr, setIsLoadingCurr] = useState(false);
-  const BASE_URL = "http://localhost:3000/hotels";
   const [searchParams] = useSearchParams();
   const destination = searchParams.get("destination");
   const room = JSON.parse(searchParams.get("options"))?.room;
@@ -35,8 +38,9 @@ function HotelProvider({ children }) {
       setIsLoadingCurr(false);
     }
   }
+
   return (
-    <HotelsProvider.Provider
+    <HotelContext.Provider
       value={{
         isLoading,
         hotels,
@@ -47,12 +51,12 @@ function HotelProvider({ children }) {
       }}
     >
       {children}
-    </HotelsProvider.Provider>
+    </HotelContext.Provider>
   );
 }
 
 export default HotelProvider;
 
 export function useHotels() {
-  return useContext(HotelsProvider);
+  return useContext(HotelContext);
 }

@@ -8,19 +8,27 @@ export default function useFetch(url, query = "") {
 
   useEffect(() => {
     async function fetchData() {
+      setIsLoading(true);
       try {
-        setIsLoading(true);
+        
         const { data } = await axios.get(`${url}?${query}`);
         setData(data);
       } catch (err) {
-        setData([]);
+      
         toast.error(err?.message);
       } finally {
         setIsLoading(false);
       }
     }
+    setIsLoading(true)
+  const Timer = setTimeout(() => {
+    
+    fetchData()
+  }, 1000);
 
-    fetchData();
+    
+   return ()=>clearTimeout(Timer)
+  
   }, [query, url]);
 
   return { isLoading, data };

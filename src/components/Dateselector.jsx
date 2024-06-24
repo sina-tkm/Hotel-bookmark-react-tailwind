@@ -13,7 +13,7 @@ import {
   useSearchParams,
 } from "react-router-dom";
 
-function Dateselector() {
+function DateselectorHotel() {
   const [searchParams] = useSearchParams();
   const [destination, setDestination] = useState(
     searchParams.get("destination") || ""
@@ -124,7 +124,7 @@ function Dateselector() {
   );
 }
 
-export default Dateselector;
+export default DateselectorHotel;
 
 // mini card of select count of peape
 

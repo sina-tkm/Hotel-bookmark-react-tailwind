@@ -59,7 +59,7 @@
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "paris",
       "state": "Noord-Holland",
       "zipcode": "1054",
       "market": "Amsterdam",
@@ -183,7 +183,7 @@
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "paris",
       "state": "Noord-Holland",
       "zipcode": "1054 HP",
       "market": "Amsterdam",
@@ -321,7 +321,7 @@
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "london",
       "state": "North Holland",
       "zipcode": "1054",
       "market": "Amsterdam",
@@ -451,7 +451,7 @@
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "london",
       "state": "Noord-Holland",
       "zipcode": "1054 AH",
       "market": "Amsterdam",
@@ -591,7 +591,7 @@
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "paris",
       "state": "North Holland",
       "zipcode": "1054",
       "market": "Amsterdam",
@@ -717,7 +717,7 @@
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "london",
       "state": "North Holland",
       "zipcode": null,
       "market": "Amsterdam",
@@ -846,7 +846,7 @@
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "hamburg",
       "state": "Noord-Holland",
       "zipcode": "1054 DM",
       "market": null,
@@ -951,7 +951,7 @@
         "height": 426,
         "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/089848e03bb2b3b495ad7dc8f7640af4"
       },
-      "xl_picture_url": "https://a0.muscache.com/im/pictures/440cb88b-6a93-48bc-b87f-78675ea40c60.jpg?aki_policy=x_large",
+      "xl_picture_url": "https://c4.wallpaperflare.com/wallpaper/787/399/647/life-resort-travel-vacation-wallpaper-preview.jpg",
       "host_id": "14694975",
       "host_url": "https://www.airbnb.com/users/show/14694975",
       "host_name": "Robin&Thaís",
@@ -975,7 +975,7 @@
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
       "neighbourhood_group_cleansed": null,
-      "city": "Amsterdam",
+      "city": "hamburg",
       "state": "NH",
       "zipcode": "1056",
       "market": "Amsterdam",
@@ -1221,7 +1221,7 @@
         "height": 426,
         "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/2e202e79e908a132d144cc32168fcfc3"
       },
-      "xl_picture_url": null,
+      "xl_picture_url": "https://c4.wallpaperflare.com/wallpaper/971/27/637/beach-bungalow-view-out-in-the-maldives-wallpaper-preview.jpg",
       "host_id": "40565986",
       "host_url": "https://www.airbnb.com/users/show/40565986",
       "host_name": "Claudia",
@@ -1331,7 +1331,7 @@
       "latitude": "23.18455079512732",
       "longitude": "3.795523257510883",
       "host_location": "Abalessa Algeria",
-      "id": 1
+      "id": "1"
     },
     {
       "cityName": "Mahidasht",
@@ -1340,7 +1340,7 @@
       "latitude": "34.32869425037187",
       "longitude": "46.724183117022086",
       "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": 4
+      "id": "4"
     },
     {
       "cityName": "Sanandaj",
@@ -1349,25 +1349,43 @@
       "latitude": "35.31372444726279",
       "longitude": "47.03114358752335",
       "host_location": "Sanandaj Iran (Islamic Republic of)",
-      "id": 5
+      "id": "5"
     },
     {
-      "cityName": "A Dakhla Oasis",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "latitude": "25.02090651422749",
-      "longitude": "29.09059588509316",
-      "host_location": "A Dakhla Oasis Egypt",
-      "id": 7
+      "id": "c14a",
+      "cityName": "Beugnatre",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "50.13455428960849",
+      "longitude": "2.8669166564941406",
+      "host_location": "Beugnatre France"
     },
     {
-      "cityName": "Baba Kot",
-      "country": "Pakistan",
-      "countryCode": "PK",
-      "latitude": "28.43528783183169",
-      "longitude": "67.78003711374224",
-      "host_location": "Baba Kot Pakistan",
-      "id": 8
+      "id": "d190",
+      "cityName": "Jowkar",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "34.56085936708384",
+      "longitude": "48.86718750000001",
+      "host_location": "Jowkar Iran (Islamic Republic of)"
+    },
+    {
+      "id": "54f5",
+      "cityName": "Jowkar",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "34.56085936708384",
+      "longitude": "48.86718750000001",
+      "host_location": "Jowkar Iran (Islamic Republic of)"
+    },
+    {
+      "id": "a27f",
+      "cityName": "Chamant",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "49.22836014090129",
+      "longitude": "2.6367187500000004",
+      "host_location": "Chamant France"
     }
   ]
 }
