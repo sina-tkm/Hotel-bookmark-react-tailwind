@@ -146,7 +146,7 @@
     top: 18px;
   }
   .box-shadow-bar{
-    box-shadow: 0px -6px 46px 0px  black;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2), -5px -5px 30px rgba(0,0,0,0.1);
   }
   .image-animation{
     width: 500px ;
@@ -184,7 +184,15 @@
     box-shadow: 5px 5px 30px rgba(0,0,0,0.2), -5px -5px 30px rgba(0,0,0,0.1);
     border: 1px solid #00000025;
 }
+.box-location_shadow{
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2), -5px -5px 30px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    background-color: hsl(0,0%,6%,.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(230deg,rgb(129, 236, 236),rgb(250, 177, 160));
 
+}
 
 
 .card-footer{
@@ -254,7 +262,7 @@
 
 
 .cards{
-   margin-top: 40px;
+   margin-top: 140px;
     width: 100%;
     overflow: hidden;
     display: flex;

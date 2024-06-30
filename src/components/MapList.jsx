@@ -36,7 +36,7 @@ function MapList({ markerLocation }) {
 
  
   return (
-    <div className='rounded-lg h-[350px] w-[400px] p-[10px] bg-map '>
+    <div className='rounded-lg h-[350px] w-[400px] p-[10px] bg-map box-shadow-bar '>
       <MapContainer
         className='  w-[100%] h-[100%] border rounded-[18px] border-black z-[100] '
         center={showMap}

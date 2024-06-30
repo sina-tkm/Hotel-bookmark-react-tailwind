@@ -1325,60 +1325,6 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
-      "id": "1"
-    },
-    {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": "4"
-    },
-    {
-      "cityName": "Sanandaj",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.31372444726279",
-      "longitude": "47.03114358752335",
-      "host_location": "Sanandaj Iran (Islamic Republic of)",
-      "id": "5"
-    },
-    {
-      "id": "c14a",
-      "cityName": "Beugnatre",
-      "country": "France",
-      "countryCode": "FR",
-      "latitude": "50.13455428960849",
-      "longitude": "2.8669166564941406",
-      "host_location": "Beugnatre France"
-    },
-    {
-      "id": "d190",
-      "cityName": "Jowkar",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.56085936708384",
-      "longitude": "48.86718750000001",
-      "host_location": "Jowkar Iran (Islamic Republic of)"
-    },
-    {
-      "id": "54f5",
-      "cityName": "Jowkar",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.56085936708384",
-      "longitude": "48.86718750000001",
-      "host_location": "Jowkar Iran (Islamic Republic of)"
-    },
-    {
       "id": "a27f",
       "cityName": "Chamant",
       "country": "France",
@@ -1386,6 +1332,33 @@
       "latitude": "49.22836014090129",
       "longitude": "2.6367187500000004",
       "host_location": "Chamant France"
+    },
+    {
+      "id": "df6f",
+      "cityName": "Tehran",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.68407153314097",
+      "longitude": "51.39404296875001",
+      "host_location": "Tehran Iran (Islamic Republic of)"
+    },
+    {
+      "id": "e71c",
+      "cityName": "Tehran",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.67514743608467",
+      "longitude": "51.405029296875",
+      "host_location": "Tehran Iran (Islamic Republic of)"
+    },
+    {
+      "id": "8644",
+      "cityName": "Kuzaran",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "34.32302363048832",
+      "longitude": "46.61224365234375",
+      "host_location": "Kuzaran Iran (Islamic Republic of)"
     }
   ]
 }

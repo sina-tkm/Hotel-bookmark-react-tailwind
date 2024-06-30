@@ -20,7 +20,8 @@ if(isLoading) return  <LocationSkleton/>
       {data.slice(0, 3).map((item) => {
         return (
           <div
-            className='flex gap-x-[60px]  h-[620px]  child-order border-b p-12'
+          
+            className='flex gap-x-[60px]  h-[620px]  child-order border-b p-12 box-location_shadow'
             key={item.id}
           >
             <img

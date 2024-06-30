@@ -52,6 +52,18 @@ function BookMarkListContext({ children }) {
       setIsLoading(false);
     }
   }
+  async function deleteBookMark(id) {
+    setIsLoading(true);
+
+    try {
+    await axios.delete(`${BASE_URL}/bookmarks/${id}`);
+      setBookMark((prev) => prev.filter(item => item.id !== id));
+    } catch (error) {
+      toast.error(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   return (
     <BookMarkContext.Provider
@@ -61,6 +73,7 @@ function BookMarkListContext({ children }) {
         getBookMark,
         createBookMark,
         currentBookmark,
+        deleteBookMark,
       }}
     >
       {children}

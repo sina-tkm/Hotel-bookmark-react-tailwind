@@ -12,8 +12,8 @@ function Hotels() {
         {hotels.map((items) => {
           return (
             <Link
-            className="p-[10px] border "
-              key={items.id}
+            className="p-[10px] border box-shadow-bar rounded-[12px]"
+              key={items.id} 
               to={`/hotels/${items.id}?lat=${items.latitude}&lng=${items.longitude}`}
             >
               <div className='flex w-1/2  gap-x-4 '>
