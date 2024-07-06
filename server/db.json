@@ -1325,40 +1325,22 @@
   ],
   "bookmarks": [
     {
-      "id": "a27f",
-      "cityName": "Chamant",
+      "id": "e214",
+      "cityName": "Doignies",
       "country": "France",
       "countryCode": "FR",
-      "latitude": "49.22836014090129",
-      "longitude": "2.6367187500000004",
-      "host_location": "Chamant France"
+      "latitude": "50.1241000426924",
+      "longitude": "3.0322265625000004",
+      "host_location": "Doignies France"
     },
     {
-      "id": "df6f",
-      "cityName": "Tehran",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.68407153314097",
-      "longitude": "51.39404296875001",
-      "host_location": "Tehran Iran (Islamic Republic of)"
-    },
-    {
-      "id": "e71c",
-      "cityName": "Tehran",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.67514743608467",
-      "longitude": "51.405029296875",
-      "host_location": "Tehran Iran (Islamic Republic of)"
-    },
-    {
-      "id": "8644",
-      "cityName": "Kuzaran",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32302363048832",
-      "longitude": "46.61224365234375",
-      "host_location": "Kuzaran Iran (Islamic Republic of)"
+      "id": "7590",
+      "cityName": "Cagnicourt",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "50.222609311890245",
+      "longitude": "2.98553466796875",
+      "host_location": "Cagnicourt France"
     }
   ]
 }

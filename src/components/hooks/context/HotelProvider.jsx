@@ -1,8 +1,39 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useReducer } from "react";
 import { useSearchParams } from "react-router-dom";
 import useFetch from "../Fetchapi";
 import axios from "axios";
 import toast from "react-hot-toast";
+
+const Base_intial = {
+  listSearch: [],
+  currentHotel: {},
+  isLoadingCurr: false,
+  error: null,
+};
+function hotelManage(state, action) {
+  switch (action.type) {
+    case "loading":
+      return {
+        ...state,
+        currentHotel: true,
+      };
+    case "listhotel":
+      return {
+        ...state,
+        currentHotel: action.payload,
+        listSearch: state.listSearch.some(
+          (hotel) => hotel.id === action.payload.id
+        )
+          ? state.listSearch
+          : [...state.listSearch, action.payload],
+        isLoadingCurr: false,
+      };
+    case "rejected":
+      return {
+        error: action.payload,
+      };
+  }
+}
 
 // Renaming context for clarity
 const HotelContext = createContext();
@@ -10,10 +41,13 @@ const HotelContext = createContext();
 const BASE_URL = "http://localhost:3000/hotels";
 
 function HotelProvider({ children }) {
-  const [listSearch, setListSearch] = useState([]);
-  const [currentHotel, setCurrentHotel] = useState({});
-  const [isLoadingCurr, setIsLoadingCurr] = useState(false);
+  const [{ listSearch, currentHotel, isLoadingCurr }, dispatch] = useReducer(
+    hotelManage,
+    Base_intial
+  );
+
   const [searchParams] = useSearchParams();
+
   const destination = searchParams.get("destination");
   const room = JSON.parse(searchParams.get("options"))?.room;
   const { isLoading, data: hotels } = useFetch(
@@ -22,20 +56,14 @@ function HotelProvider({ children }) {
   );
 
   async function getHotel(id) {
-    setIsLoadingCurr(true);
+    dispatch({ type: "loading" });
+
     try {
       const { data } = await axios.get(`${BASE_URL}/${id}`);
-      setCurrentHotel(data);
-      setListSearch((prev) => {
-        if (prev.find((hotel) => hotel.id === data.id)) {
-          return prev;
-        }
-        return [...prev, data];
-      });
-      setIsLoadingCurr(false);
+      dispatch({ type: "listhotel", payload: data });
     } catch (error) {
       toast.error(error.message);
-      setIsLoadingCurr(false);
+      dispatch({ type: "rejected", payload: error.message });
     }
   }
 

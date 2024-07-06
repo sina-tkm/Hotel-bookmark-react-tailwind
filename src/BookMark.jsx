@@ -18,6 +18,7 @@ function BookMark() {
         <LoaderSkeleton />
       </div>
     );
+  if (!bookmarks.length) return <p>there is not any bookmark here </p>;
   return (
     <div className='flex flex-col gap-y-6  '>
       {bookmarks.map((item) => {
@@ -28,9 +29,12 @@ function BookMark() {
             className='flex border w-[400px] rounded-lg p-[10px] gap-x-[38px]'
           >
             <ReactCountryFlag svg countryCode={item.countryCode} />
-            &nbsp; <strong className="w-[30px]"> {item.cityName}</strong> &nbsp;{" "}
+            &nbsp; <strong className='w-[30px]'>
+              {" "}
+              {item.cityName}
+            </strong> &nbsp;{" "}
             <span className='flex gap-x-2 whitespace-nowrap  justify-center items-center text-[12px]'>
-             <span className="w-[60px]"> {item.country}{" "}</span>
+              <span className='w-[60px]'> {item.country} </span>
               {item.id === currentBookmark.id ? (
                 <CheckBadgeIcon className='w-[20px] h-[20px] text-red-400' />
               ) : null}
