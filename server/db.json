@@ -1325,22 +1325,13 @@
   ],
   "bookmarks": [
     {
-      "id": "e214",
-      "cityName": "Doignies",
+      "id": "dd1d",
+      "cityName": "Courson-Monteloup",
       "country": "France",
       "countryCode": "FR",
-      "latitude": "50.1241000426924",
-      "longitude": "3.0322265625000004",
-      "host_location": "Doignies France"
-    },
-    {
-      "id": "7590",
-      "cityName": "Cagnicourt",
-      "country": "France",
-      "countryCode": "FR",
-      "latitude": "50.222609311890245",
-      "longitude": "2.98553466796875",
-      "host_location": "Cagnicourt France"
+      "latitude": "48.59114254808811",
+      "longitude": "2.1492004394531254",
+      "host_location": "Courson-Monteloup France"
     }
   ]
 }

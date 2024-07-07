@@ -105,7 +105,7 @@ function BookMarkListContext({ children }) {
     }
   }
   async function deleteBookMark(id) {
-    if (Number(id) === currentBookmark?.id) return;
+    if (id === currentBookmark?.id) return;
     dispatch({ type: "loading" });
 
     try {

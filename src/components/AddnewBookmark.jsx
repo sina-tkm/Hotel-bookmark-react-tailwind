@@ -44,7 +44,12 @@ function AddnewBookmark() {
     geoLocation();
   }, [lat, long]);
 
-  if (isLoading) return <div><LoaderSkeleton /> </div>;
+  if (isLoading)
+    return (
+      <div>
+        <LoaderSkeleton />{" "}
+      </div>
+    );
   if (geoerror) return <p>{geoerror}</p>;
   const handleBookmark = async (e) => {
     e.preventDefault();
@@ -57,7 +62,7 @@ function AddnewBookmark() {
       host_location: cityName + " " + country,
     };
     await createBookMark(newBookmark);
-    navigate('/bookmark')
+    navigate("/bookmark");
   };
 
   return (

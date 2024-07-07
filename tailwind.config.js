@@ -1,19 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily:{
-          newfont :' "Merriweather", serif'
+      fontFamily: {
+        newfont: ' "Cabin", sans-serif'
         
-          
-        
-      }
+      },
     },
   },
   plugins: [],
-}
-
+};

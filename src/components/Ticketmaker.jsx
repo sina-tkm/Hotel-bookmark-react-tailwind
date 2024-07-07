@@ -111,6 +111,7 @@ function Ticketmaker() {
           </NavLink>
         </div>
       </div>
+      
 
       {state.value === "content1" && <Train />}
       {state.value === "content2" && <Airplane />}
