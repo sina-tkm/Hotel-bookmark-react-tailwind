@@ -31,16 +31,16 @@ if(isLoading) return  <LocationSkleton/>
             />
 
             <div className='flex flex-col mx-4  w-[60%] justify-center gap-y-8 h-[500px] '>
-              <p className=' font-semibold text-[22px]    p-1   rounded-md flex justify-center  items-center text-center'>
+              <p className=' font-semibold text-[22px] font-secfont   p-1   rounded-md flex justify-center  items-center text-center'>
                 {item.smart_location}
               </p>
-              <p className='font-name  w-fit p-[4px]  text-start overflow-hidden loading-8'>
+              <p className='font-name font-secfont  w-fit p-[4px]  text-start overflow-hidden loading-8'>
                 {item.description}
               </p>
               <div className='flex justify-start items-center text-start gap-x-[2px]'>
                 <span>€</span>
-                <p className='font-name'>{item.price}</p>
-                <span>/night</span>
+                <p className='font-name font-secfont'>{item.price}</p>
+                <span className="font-secfont">/night</span>
               </div>
             </div>
           </div>

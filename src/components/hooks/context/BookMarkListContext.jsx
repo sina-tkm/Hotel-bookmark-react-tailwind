@@ -80,6 +80,8 @@ function BookMarkListContext({ children }) {
   }, []);
 
   async function getBookMark(id) {
+    if (Number(id) === currentBookmark?.id) return;
+
     dispatch({ type: "loading" });
     try {
       const { data } = await axios.get(`${BASE_URL}/bookmarks/${id}`);
@@ -105,7 +107,6 @@ function BookMarkListContext({ children }) {
     }
   }
   async function deleteBookMark(id) {
-    if (id === currentBookmark?.id) return;
     dispatch({ type: "loading" });
 
     try {

@@ -86,9 +86,8 @@ function DateselectorHotel() {
           className='  z-[100] flex cursor-pointer border-input justify-center items-center   px-4 h-[40px] w-[250px]  rounded-md relative gap-x-3 text-[13px] whitespace-nowrap'
           onClick={() => setOpenOption(!openOption)}
         >
-          
-          Children : ({option.children}) &nbsp;&bull;&nbsp; Adult: ({option.adult}
-          ) &nbsp;&bull;&nbsp; adult: ({option.room})
+          Children : ({option.children}) &nbsp;&bull;&nbsp; Adult: (
+          {option.adult}) &nbsp;&bull;&nbsp; adult: ({option.room})
         </div>
         {openOption && (
           <Minicard
@@ -109,7 +108,6 @@ function DateselectorHotel() {
       </div>
 
       <div className='flex flex-col relative'>
-        
         <input
           value={destination}
           name='destination'
@@ -153,7 +151,6 @@ export function Minicard({ option, handleOption, setOpenOption }) {
       />
       <Peaples
         handleOption={handleOption}
-        
         type='adult'
         minLimit={1}
         option={option}
@@ -163,7 +160,7 @@ export function Minicard({ option, handleOption, setOpenOption }) {
   );
 }
 
-function Peaples({ type, minLimit, option, handleOption, maxLimit}) {
+function Peaples({ type, minLimit, option, handleOption, maxLimit }) {
   return (
     <div className='flex gap-x-6'>
       <button

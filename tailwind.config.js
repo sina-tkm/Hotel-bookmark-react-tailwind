@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        newfont: ' "Cabin", sans-serif'
+        newfont: ' "Cabin", sans-serif',
+        secfont: ' "Caveat", cursive'
+
         
       },
     },

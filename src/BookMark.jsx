@@ -6,8 +6,8 @@ import { CheckBadgeIcon } from "@heroicons/react/16/solid";
 import LoaderSkeleton from "./components/SkeletonLoader";
 
 function BookMark() {
-  const { isLoading, bookmarks, currentBookmark, deleteBookMark } =
-    useBookmark();
+  const { isLoading, bookmarks, currentBookmark, deleteBookMark } = useBookmark();
+    
   const handleDelete = async (e, id) => {
     e.preventDefault();
     await deleteBookMark(id);
@@ -35,9 +35,9 @@ function BookMark() {
             </strong> &nbsp;{" "}
             <span className='flex gap-x-2 whitespace-nowrap  justify-center items-center text-[12px]'>
               <span className='w-[60px]'> {item.country} </span>
-              {item.id === currentBookmark.id ? (
+              {item.id === currentBookmark.id ? 
                 <CheckBadgeIcon className='w-[20px] h-[20px] text-red-400' />
-              ) : null}
+               : null}
             </span>
             <button onClick={(e) => handleDelete(e, item.id)}>
               <TrashIcon className='w-[20px] h--[20px] ' />

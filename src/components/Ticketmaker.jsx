@@ -31,7 +31,7 @@ function Ticketmaker() {
     };
   }, [hidden]);
   return (
-    <div className='w-[75%]  mx-auto z-[1000]  mt-[-105px] box-shadow-bar navbar-shadow rounded-lg sticky-position '>
+    <div className='w-[75%] border mx-auto z-[1000]  mt-[-105px] box-shadow-bar navbar-shadow rounded-lg sticky-position '>
       <div
         className={
           !hidden
@@ -49,7 +49,7 @@ function Ticketmaker() {
             onClick={() => dispatch({ type: "one", payload: "content1" })}
             className='flex flex-col justify-center items-center'
           >
-            <span className='icon-color'>Train</span>
+            <span className='icon-color font-semibold'>Train</span>
             <span>
               {" "}
               <FontAwesomeIcon icon={faTrain} className='text-size' />
@@ -67,7 +67,7 @@ function Ticketmaker() {
             onClick={() => dispatch({ type: "two", payload: "content2" })}
             className='flex flex-col justify-center items-center'
           >
-            <span className='icon-color'>AirPlane</span>
+            <span className='icon-color font-semibold'>AirPlane</span>
             <span>
               {" "}
               <FontAwesomeIcon icon={faPlaneDeparture} className='text-size' />
@@ -85,7 +85,7 @@ function Ticketmaker() {
             onClick={() => dispatch({ type: "three", payload: "content3" })}
             className='flex flex-col justify-center items-center'
           >
-            <span className='icon-color'>Hotel</span>
+            <span className='icon-color font-semibold'>Hotel</span>
             <span>
               {" "}
               <FontAwesomeIcon icon={faBuilding} className='text-size' />
@@ -103,7 +103,7 @@ function Ticketmaker() {
             onClick={() => dispatch({ type: "four", payload: "content4" })}
             className='flex flex-col justify-center items-center'
           >
-            <span className='icon-color'>Bus</span>
+            <span className='icon-color font-semibold'>Bus</span>
             <span>
               {" "}
               <FontAwesomeIcon icon={faBus} className='text-size' />
