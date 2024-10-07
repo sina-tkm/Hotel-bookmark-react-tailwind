@@ -15,19 +15,20 @@ function LoginComp() {
     if (isAuthenticated) navigate("/", { replace: true });
   }, [isAuthenticated, navigate, user]);
   return (
-    <div className='mx-auto w-[500px] h-[350px] p-2 login-blur rounded-lg mt-[-190px]'>
+    <div className='mx-auto border w-[500px] h-[270px] p-2 login-blur rounded-lg mt-[-60px]'>
       <h2 className='w-2/3 flex justify-center p-[12px] mx-auto border-b-2 text-white '>
         Login
       </h2>
       <form
         onSubmit={handleSubmit}
-        className='flex flex-col gap-y-10  p-[70px] w-full'
+        className='flex flex-col gap-y-[18px]  p-[50px] w-full'
       >
         <div className='flex w-full justify-between'>
           <label htmlFor='email' className='text-white'>
-            Email
+            Email :
           </label>
           <input
+            className='w-[200px] rounded-lg p-[4px]'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type='text'
@@ -37,9 +38,10 @@ function LoginComp() {
         </div>
         <div className='flex w-full justify-between'>
           <label htmlFor='password' className='w-[60px] text-white'>
-            Password
+            Password:
           </label>
           <input
+            className='w-[200px] rounded-lg p-[4px]'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type='password'
@@ -48,12 +50,12 @@ function LoginComp() {
           />
         </div>
         <div className='flex gap-x-8'>
-          <button className='w-[100px] h-[40px] bg-rose-300 flex justify-center items-center text-white'>
+          <button className='w-[100px] h-[40px] bg-black border rounded-lg flex justify-center items-center text-white'>
             Login
           </button>
           <NavLink
-            to='/hotel'
-            className='w-[100px] h-[40px] bg-rose-300 flex justify-center items-center text-white'
+            to='/'
+            className='w-[100px] h-[40px] bg-black border rounded-lg flex justify-center items-center text-white'
           >
             BACK
           </NavLink>

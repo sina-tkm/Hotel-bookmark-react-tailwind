@@ -40,11 +40,14 @@ function App() {
                   <Route index element={<Hotels />} />
                   <Route path=':id' element={<SingleHotel />} />
                 </Route>
-                <Route path='/bookmark' element={
-                  <ProtectedRoute>
-                    <BookMarkLayout />
-                  </ProtectedRoute>
-                }>
+                <Route
+                  path='/bookmark'
+                  element={
+                    <ProtectedRoute>
+                      <BookMarkLayout />
+                    </ProtectedRoute>
+                  }
+                >
                   <Route index element={<BookMark />} />
                   <Route path=':id' element={<SingleBookmrark />} />
                   <Route path='add' element={<AddnewBookmark />} />

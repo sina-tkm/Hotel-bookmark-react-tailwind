@@ -1,14 +1,11 @@
 import { createContext, useContext, useReducer } from "react";
 
-
 export const SelectContext = createContext({});
 export const DispatchContext = createContext(() => {});
 
-
 const initialState = {
- value: "content3" 
+  value: "content3",
 };
-
 
 function reducer(state, action) {
   switch (action.type) {
@@ -18,13 +15,12 @@ function reducer(state, action) {
     case "four":
       return {
         ...state,
-        value: action.payload
+        value: action.payload,
       };
     default:
       throw new Error("Unknown action type: " + action.type);
   }
 }
-
 
 export function MyProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
